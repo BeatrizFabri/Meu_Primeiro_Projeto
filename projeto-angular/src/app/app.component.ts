@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
 
 @Component({
@@ -19,6 +20,10 @@ export class AppComponent {
     this.nome = nomeInput.value;
     console.log("Adicionando...");
     console.log("nome modif: " + this.nome);
-
+    if (nomeInput.value.lenght<0) {
+      this.esconder = false;
+    } else {
+      this.esconder = true;
+    }
   }
 }

@@ -2,62 +2,72 @@
 
 <div class="container">
   <form>
-      <div class="form-group">
-        <div class="container">
-          <div class="row">
-            <div class="col-2">
-              <label for="nomeInput">Nome</label>
-              <input type="id" class="form-control" id="idInput" placeholder="O ID é automático" #nomeInput>
-            </div>
-            <div class="col-10">
-              <label for="nomeInput">Nome</label>
-              <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome" #nomeInput>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <label class="endeInput">endereço</label>
-              <input type="ende" class="form-control" id="endeInput" placeholder="Digite o endereço" #endeInput>
-            </div>
-            <div class="col-6">
-              <label class="endeInput">cidade</label>
-              <input type="ende" class="form-control" id="endeInput" placeholder="Digite a cidade" #endeInput>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <label for="cidadeInput">Bairro</label>
-              <input type="cidade" class="form-control" id="cidadeInput" placeholder="Digite o bairro" #cidadeInput>
-            </div>
-            <div class="col-3">
-              <label for="bairroInput">CEP</label>
-              <input type="bairro" class="form-control" id="bairroInput" placeholder="00000-000" #cidadeInput>
-            </div>
-            <div>
-              <label for="bairroInput">Telefone</label>
-              <input type="bairro" class="form-control" id="bairroInput" placeholder="(xx)xxxxx-xxxx" #cidadeInput>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+    <div class="form-group">
       <div class="container">
-        <div class="row alert alert-primary mt-3 p-3" [hidden]="">
+        <div class="row">
           <div class="col-2">
-            <button type="button" class="btn btn-primary btn-block">Novo</button>
+            <label for="nomeInput">Nome</label>
+            <input type="id" class="form-control" id="idInput" placeholder="O ID é automático" readonly="true"
+              #nomeInput>
           </div>
-          <div class="col-2">
-            <button type="button" class="btn btn-primary btn-block">Alterar</button>
+          <div class="col-10">
+            <label for="nomeInput">Nome</label>
+            <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome" readonly="true"
+              #nomeInput>
           </div>
-          <div class="col-2">
-            <button type="button" class="btn btn-primary btn-block">Excluir</button>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label class="endeInput">Endereço</label>
+            <input type="ende" class="form-control" id="endeInput" placeholder="Digite o endereço" readonly="true"
+              #endeInput>
           </div>
-          <div class="col-2">
-            <button type="button" class="btn btn-primary btn-block">Procurar</button>
+          <div class="col-6">
+            <label class="endeInput">Cidade</label>
+            <input type="ende" class="form-control" id="endeInput" placeholder="Digite a cidade" readonly="true"
+              #endeInput>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="cidadeInput">Bairro</label>
+            <input type="cidade" class="form-control" id="cidadeInput" placeholder="Digite o bairro" readonly="true"
+              #cidadeInput>
+          </div>
+          <div class="col-3">
+            <label for="bairroInput">CEP</label>
+            <input type="bairro" class="form-control" id="bairroInput" placeholder="00000-000" readonly="true"
+              #cidadeInput>
+          </div>
+          <div>
+            <label for="bairroInput">Telefone</label>
+            <input type="bairro" class="form-control" id="bairroInput" placeholder="(xx)xxxxx-xxxx" readonly="true"
+              #cidadeInput>
           </div>
         </div>
       </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row alert alert-primary mt-3 p-3" [hidden]="">
+        <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block)" (click)="adicionar(nomeInput)">Novo</button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block)" (click)="adicionar(nomeInput)">Alterar</button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block)" (click)="adicionar(nomeInput)">Excluir</button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block)" (click)="adicionar(nomeInput)">Procurar</button>
+        </div>
+        <!-- <div class="alert alert-primary mt-3 p-3" [hidden]="esconder">
+            {{nome}}
+        </div> -->
+      </div>
+    </div>
 
 
   </form>
