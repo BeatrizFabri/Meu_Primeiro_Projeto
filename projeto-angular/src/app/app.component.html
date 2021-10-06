@@ -50,22 +50,27 @@
 
     <div class="container">
       <div class="row alert alert-primary mt-3 p-3" [hidden]="">
-        <input placeholder="Digite um nome a ser procurado" class="col-4" [hidden]="inputProcurar">
-        <div class="col-2">
+        <input placeholder="Digite um nome a ser procurado" class="col-3" [hidden]="inputProcurar">
+        <div class="col-1">
           <button type="button" class="btn btn-primary btn-block)" (click)="adicionar()" [hidden]="novo">Novo</button>
         </div>
-        <div class="col-2">
+        <div class="col-1">
           <button type="button" class="btn btn-primary btn-block)" (click)="alterarForm()"
             [hidden]="alterar">Alterar</button>
         </div>
-        <div class="col-2">
+        <div class="col-1">
           <button type="button" class="btn btn-primary btn-block)" (click)="excluirForm()"
             [hidden]="excluir">Excluir</button>
         </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-primary btn-block)" (click)="procurarForm(inputProcurar)" [hidden]="procurar">Procurar</button>
+        <div class="col-1">
+          <button type="button" class="btn btn-primary btn-block)" (click)="procurarForm(inputProcurar)"
+            [hidden]="procurar">Procurar</button>
         </div>
         <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block)" (click)="excluirRegistroForm()"
+            [hidden]="excluirRegistro">Excluir Registro</button>
+        </div>
+        <div class="col-1">
           <button type="button" class="btn btn-primary btn-block)" (click)="gravarForm()"
             [hidden]="gravar">Gravar</button>
         </div>
@@ -73,10 +78,7 @@
           <button type="button" class="btn btn-primary btn-block)" (click)="cancelarForm()"
             [hidden]="cancelar">Cancelar</button>
         </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-primary btn-block)" (click)="excluirRegistroForm()"
-            [hidden]="excluirRegistro">Excluir Registro</button>
-        </div>
+        
       </div>
     </div>
 
