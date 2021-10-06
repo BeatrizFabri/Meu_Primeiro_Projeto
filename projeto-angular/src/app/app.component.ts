@@ -11,12 +11,12 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  nomeInput = true;
-  endeInput = true;
-  cidadeInput = true;
-  bairroInput = true;
-  cepInput = true;
-  telefoneInput = true;
+  nomeInput: any = true;
+  endeInput: any = true;
+  cidadeInput: any = true;
+  bairroInput: any = true;
+  cepInput: any = true;
+  telefoneInput: any = true;
   novo = false;
   alterar = false;
   excluir = false;
@@ -24,6 +24,7 @@ export class AppComponent {
   gravar = true;
   cancelar = true;
   excluirRegistro = true;
+  inputProcurar = true;
   userForm = new FormGroup({
     nome: new FormControl(''),
     ende: new FormControl(''),
@@ -32,32 +33,111 @@ export class AppComponent {
     telefone: new FormControl(''),
     cidade: new FormControl(''),
   });
-
-  alterarNome(nome: any) {
-    console.log(nome.target.value);
-    //   this.userForm.nome = nome.target.value;
-    console.log(nome);
-  }
   adicionar() {
-    this.nomeInput = false;
-    this.endeInput = false;
-    this.cidadeInput = false;
-    this.bairroInput = false;
-    this.cepInput = false;
-    this.telefoneInput = false;
+    this.nomeInput = null;
+    this.endeInput = null;
+    this.cidadeInput = null;
+    this.bairroInput = null;
+    this.cepInput = null;
+    this.telefoneInput = null;
     this.novo = true;
     this.alterar = true;
     this.excluir = true;
     this.procurar = true;
     this.gravar = false;
     this.cancelar = false;
+    this.excluirRegistro = true;
+    this.inputProcurar = true;
   }
   gravarForm() {
     this.userForm.reset();
-    // console.log(this.userForm.get('nome') !== null ? this.userForm.get('nome')?.value: null);
-
+    this.nomeInput = true;
+    this.endeInput = true;
+    this.cidadeInput = true;
+    this.bairroInput = true;
+    this.cepInput = true;
+    this.telefoneInput = true;
+    this.novo = false;
+    this.alterar = false;
+    this.excluir = false;
+    this.procurar = false;
+    this.gravar = true;
+    this.cancelar = true;
+    this.excluirRegistro = true;
+    this.inputProcurar = true;
   }
   cancelarForm() {
     this.userForm.reset();
+    this.nomeInput = true;
+    this.endeInput = true;
+    this.cidadeInput = true;
+    this.bairroInput = true;
+    this.cepInput = true;
+    this.telefoneInput = true;
+    this.novo = false;
+    this.alterar = false;
+    this.excluir = false;
+    this.procurar = false;
+    this.gravar = true;
+    this.cancelar = true;
+    this.excluirRegistro = true;
+    this.inputProcurar = true;
+  }
+  alterarForm() {
+    this.nomeInput = null;
+    this.endeInput = null;
+    this.cidadeInput = null;
+    this.bairroInput = null;
+    this.cepInput = null;
+    this.telefoneInput = null;
+    this.novo = true;
+    this.alterar = true;
+    this.excluir = true;
+    this.procurar = true;
+    this.gravar = false;
+    this.cancelar = false;
+    this.excluirRegistro = true;
+    this.inputProcurar = true;
+  }
+  excluirForm() {
+    this.novo = true;
+    this.alterar = true;
+    this.excluir = true;
+    this.procurar = true;
+    this.gravar = true;
+    this.cancelar = false;
+    this.excluirRegistro = false;
+    this.inputProcurar = true;
+  }
+  excluirRegistroForm() {
+    this.userForm.reset();
+    this.nomeInput = true;
+    this.endeInput = true;
+    this.cidadeInput = true;
+    this.bairroInput = true;
+    this.cepInput = true;
+    this.telefoneInput = true;
+    this.novo = false;
+    this.alterar = false;
+    this.excluir = false;
+    this.procurar = false;
+    this.gravar = true;
+    this.cancelar = true;
+    this.excluirRegistro = true;
+    this.inputProcurar = true;
+  }
+  procurarForm(inputProcurar: any) {
+    if (inputProcurar == false) {
+      this.cancelarForm();
+    } else {
+      this.novo = true;
+      this.alterar = true;
+      this.excluir = true;
+      this.procurar = false;
+      this.gravar = true;
+      this.cancelar = true;
+      this.excluirRegistro = true;
+      this.inputProcurar = false;
+    }
   }
 }
